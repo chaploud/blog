@@ -19,8 +19,9 @@ git push origin main # Github Actionsでデプロイされる
   - `posts/` - ブログのポスト
   - `pages/` - 固定ページ
     - `links.md` - リンク集
+  - `ai-generated/` - AIで生成したMarkdownを格納
 - `static/` - ダイレクトにhtmlを配置
-  - `ai-generated` - AIで生成したページを格納
+  - `ai-generated/` - AIで生成したページを格納
 - `layouts/` - レイアウトを上書きしたければ利用
 - `assets/` - 画像などのファイルを格納
 - `archetypes/` - `hugo new`の際のテンプレート
