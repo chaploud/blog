@@ -1,8 +1,10 @@
 +++
+date = '2025-06-26T11:07:33+09:00'
 title = 'Clojure CLIとLeiningen'
+draft = false
 +++
 
-[このページのグラフィカルなまとめ](/blog/ai-generated/clojure-cli-leiningen.html)
+[グラフィカルなまとめ](/blog/ai-generated/clojure-cli-leiningen.html)
 
 # Clojureプロジェクト管理の二大潮流：LeiningenとClojure CLIツールの包括的解析
 

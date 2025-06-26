@@ -4,10 +4,10 @@ title = 'chaploud dev notes'
 theme = 'PaperMod'
 
 [params]
-ShowReadingTime = true
-ShowShareButtons = true
-ShowPostNavLinks = true
-ShowBreadCrumbs = true
+ShowReadingTime = false
+ShowShareButtons = false
+ShowPostNavLinks = false
+ShowBreadCrumbs = false
 ShowCodeCopyButtons = true
 mainSections = ["posts"]
 
@@ -15,8 +15,20 @@ mainSections = ["posts"]
 [markup.highlight]
 style = "tokyonight-night"
 
-# [menu]
-# [[menu.main]]
-# name = "About"
-# url = "/pages/about/"
-# weight = 30
+[menu]
+[[menu.main]]
+name = "ポスト一覧"
+url = "/posts/"
+weight = 30
+[[menu.main]]
+name = "ページ一覧"
+url = "/pages/"
+weight = 40
+[[menu.main]]
+name = "AI生成ページ一覧"
+url = "/ai-generated/"
+weight = 50
+[[menu.main]]
+name = "リンク集"
+url = "/links/"
+weight = 60
