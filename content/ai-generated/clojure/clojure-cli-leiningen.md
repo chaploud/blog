@@ -1,7 +1,7 @@
 +++
 date = '2025-06-26T11:07:33+09:00'
-title = 'Clojure CLIとLeiningen'
 draft = false
+title = 'Clojure CLIとLeiningen'
 +++
 
 [グラフィカルなまとめ](/blog/ai-generated/clojure-cli-leiningen.html)

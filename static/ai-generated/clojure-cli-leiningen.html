@@ -20,25 +20,25 @@
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
         body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
-        .tab-active { background-color: #0d9488; color: white; }
-        .tab-inactive { background-color: #f1f5f9; color: #334155; }
+        .tab-active { background-color: #14b8a6; color: white; }
+        .tab-inactive { background-color: #374151; color: #d1d5db; }
         .page-section { display: none; }
         .page-section.active { display: block; }
         .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
-        .code-block { background-color: #1e293b; color: #e2e8f0; font-family: monospace; padding: 1rem; border-radius: 0.5rem; white-space: pre-wrap; word-break: break-all; }
-        .command-ref-box { background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 0.5rem; padding: 1rem; min-height: 100px; }
+        .code-block { background-color: #111827; color: #f3f4f6; font-family: monospace; padding: 1rem; border-radius: 0.5rem; white-space: pre-wrap; word-break: break-all; }
+        .command-ref-box { background-color: #1f2937; border: 1px solid #4b5563; border-radius: 0.5rem; padding: 1rem; min-height: 100px; color: #f3f4f6; }
     </style>
 </head>
-<body class="bg-stone-50 text-stone-800">
+<body class="bg-gray-900 text-gray-100">
 
     <div class="container mx-auto p-4 md:p-8 max-w-7xl">
         <header class="text-center mb-8">
-            <h1 class="text-3xl md:text-4xl font-bold text-teal-700">Clojureプロジェクト管理</h1>
-            <h2 class="text-xl md:text-2xl font-semibold text-stone-600 mt-2">Leiningen vs. CLI 対話的ガイド</h2>
-            <p class="mt-4 text-stone-500 max-w-3xl mx-auto">Clojureの二大プロジェクト管理ツール、LeiningenとClojure CLIエコシステム。その哲学的背景から実践的なコマンド、そしてコミュニティの動向までを、対話的に探求します。</p>
+            <h1 class="text-3xl md:text-4xl font-bold text-teal-400">Clojureプロジェクト管理</h1>
+            <h2 class="text-xl md:text-2xl font-semibold text-gray-300 mt-2">Leiningen vs. CLI 対話的ガイド</h2>
+            <p class="mt-4 text-gray-400 max-w-3xl mx-auto">Clojureの二大プロジェクト管理ツール、LeiningenとClojure CLIエコシステム。その哲学的背景から実践的なコマンド、そしてコミュニティの動向までを、対話的に探求します。</p>
         </header>
 
-        <nav class="flex flex-wrap justify-center gap-2 md:gap-4 mb-8 sticky top-4 bg-stone-50/80 backdrop-blur-sm py-3 z-10 rounded-lg">
+        <nav class="flex flex-wrap justify-center gap-2 md:gap-4 mb-8 sticky top-4 bg-gray-800/80 backdrop-blur-sm py-3 z-10 rounded-lg">
             <button data-tab="overview" class="tab-btn tab-active px-4 py-2 rounded-md font-semibold transition-colors duration-200">概観</button>
             <button data-tab="deep-dive" class="tab-btn tab-inactive px-4 py-2 rounded-md font-semibold transition-colors duration-200">徹底比較</button>
             <button data-tab="command-ref" class="tab-btn tab-inactive px-4 py-2 rounded-md font-semibold transition-colors duration-200">コマンドリファレンス</button>
@@ -49,18 +49,18 @@
         <main>
             <!-- Overview Section -->
             <section id="overview" class="page-section active">
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 class="text-2xl font-bold text-center mb-6 text-teal-700">二つの哲学とコミュニティの動向</h3>
-                    <p class="text-center text-stone-600 mb-8">Leiningenの「容易さ」とClojure CLIの「単純さ」。この設計思想の違いが、ツール体験の全てを決定づけます。そして今、コミュニティの選択は変化しています。</p>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-700">
+                    <h3 class="text-2xl font-bold text-center mb-6 text-teal-400">二つの哲学とコミュニティの動向</h3>
+                    <p class="text-center text-gray-300 mb-8">Leiningenの「容易さ」とClojure CLIの「単純さ」。この設計思想の違いが、ツール体験の全てを決定づけます。そして今、コミュニティの選択は変化しています。</p>
 
                     <div class="grid md:grid-cols-2 gap-8 mb-12">
-                        <div class="border border-stone-200 rounded-lg p-6">
+                        <div class="border border-gray-600 rounded-lg p-6 bg-gray-750">
                             <h4 class="text-xl font-bold mb-2">Leiningen: "Easy" (容易さ)</h4>
-                            <p class="text-stone-600">「身近であること」「少ない労力で始められること」。`lein uberjar`のように、一つのコマンドで多くのことを「よしなにやってくれる」バッテリー同梱のアプローチ。初学者に優しく、一般的なタスクを迅速に実行できます。</p>
+                            <p class="text-gray-300">「身近であること」「少ない労力で始められること」。`lein uberjar`のように、一つのコマンドで多くのことを「よしなにやってくれる」バッテリー同梱のアプローチ。初学者に優しく、一般的なタスクを迅速に実行できます。</p>
                         </div>
-                        <div class="border border-stone-200 rounded-lg p-6">
+                        <div class="border border-gray-600 rounded-lg p-6 bg-gray-750">
                             <h4 class="text-xl font-bold mb-2">Clojure CLI: "Simple" (単純さ)</h4>
-                            <p class="text-stone-600">「複雑に絡み合っていないこと」。依存関係解決、プロセス起動、ビルドといった責務が独立した小さなツールの集合体。ユーザーが部品を組み合わせてワークフローを構築するため、透明性と柔軟性が非常に高いです。</p>
+                            <p class="text-gray-300">「複雑に絡み合っていないこと」。依存関係解決、プロセス起動、ビルドといった責務が独立した小さなツールの集合体。ユーザーが部品を組み合わせてワークフローを構築するため、透明性と柔軟性が非常に高いです。</p>
                         </div>
                     </div>
 
@@ -68,40 +68,40 @@
                         <h4 class="text-xl font-bold text-center mb-4">Clojure開発者のツール利用率推移</h4>
                          <div class="flex justify-center gap-4 mb-4">
                             <button id="show2023" class="px-4 py-2 text-sm font-semibold bg-teal-600 text-white rounded-md shadow-sm">2023年</button>
-                            <button id="show2024" class="px-4 py-2 text-sm font-semibold bg-slate-200 text-slate-700 rounded-md">2024年</button>
+                            <button id="show2024" class="px-4 py-2 text-sm font-semibold bg-gray-600 text-gray-200 rounded-md">2024年</button>
                         </div>
                         <div class="chart-container relative mx-auto h-80 w-full max-w-2xl">
                             <canvas id="trendsChart"></canvas>
                         </div>
-                         <p class="text-center text-sm text-stone-500 mt-2">出典: State of Clojure 調査</p>
+                         <p class="text-center text-sm text-gray-400 mt-2">出典: State of Clojure 調査</p>
                     </div>
                 </div>
             </section>
 
             <!-- Deep Dive Section -->
             <section id="deep-dive" class="page-section">
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 class="text-2xl font-bold text-center mb-6 text-teal-700">機能別 徹底比較</h3>
-                    <p class="text-center text-stone-600 mb-8">プロジェクト定義からビルド、拡張性に至るまで、LeiningenとCLIエコシステムの具体的な違いを並べて比較します。項目をクリックして詳細を展開してください。</p>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-700">
+                    <h3 class="text-2xl font-bold text-center mb-6 text-teal-400">機能別 徹底比較</h3>
+                    <p class="text-center text-gray-300 mb-8">プロジェクト定義からビルド、拡張性に至るまで、LeiningenとCLIエコシステムの具体的な違いを並べて比較します。項目をクリックして詳細を展開してください。</p>
                      <div class="space-y-4">
                         <!-- Accordion Item 1 -->
-                        <div class="accordion-item border border-stone-200 rounded-lg">
-                            <button class="accordion-header w-full text-left p-4 bg-stone-100 hover:bg-stone-200 rounded-t-lg font-semibold text-lg flex justify-between items-center">
+                        <div class="accordion-item border border-gray-600 rounded-lg">
+                            <button class="accordion-header w-full text-left p-4 bg-gray-700 hover:bg-gray-600 rounded-t-lg font-semibold text-lg flex justify-between items-center text-gray-100">
                                 <span>1. プロジェクト定義</span>
                                 <span class="accordion-icon transform transition-transform">▼</span>
                             </button>
                             <div class="accordion-content">
-                                <div class="grid md:grid-cols-2 gap-px bg-stone-200">
-                                    <div class="p-4 bg-white">
+                                <div class="grid md:grid-cols-2 gap-px bg-gray-600">
+                                    <div class="p-4 bg-gray-800">
                                         <h5 class="font-bold">Leiningen: `project.clj`</h5>
-                                        <p class="text-sm text-stone-600 mb-2">Clojureマクロ (`defproject`) でプロジェクトを定義。宣言的で多くの設定キーを持つ。</p>
+                                        <p class="text-sm text-gray-300 mb-2">Clojureマクロ (`defproject`) でプロジェクトを定義。宣言的で多くの設定キーを持つ。</p>
                                         <div class="code-block">(defproject my-app "0.1.0"
   :description "An example"
   :dependencies [[org.clojure/clojure "1.11.1"]])</div>
                                     </div>
-                                    <div class="p-4 bg-white">
+                                    <div class="p-4 bg-gray-800">
                                         <h5 class="font-bold">Clojure CLI: `deps.edn`</h5>
-                                        <p class="text-sm text-stone-600 mb-2">純粋なEDNデータ（マップ）で定義。プログラムから扱いやすく、エイリアスが中心。</p>
+                                        <p class="text-sm text-gray-300 mb-2">純粋なEDNデータ（マップ）で定義。プログラムから扱いやすく、エイリアスが中心。</p>
                                         <div class="code-block">{:paths ["src"]
  :deps {org.clojure/clojure {:mvn/version "1.11.1"}}}</div>
                                     </div>
@@ -109,19 +109,19 @@
                             </div>
                         </div>
                          <!-- Accordion Item 2 -->
-                        <div class="accordion-item border border-stone-200 rounded-lg">
-                            <button class="accordion-header w-full text-left p-4 bg-stone-100 hover:bg-stone-200 rounded-t-lg font-semibold text-lg flex justify-between items-center">
+                        <div class="accordion-item border border-gray-600 rounded-lg">
+                            <button class="accordion-header w-full text-left p-4 bg-gray-700 hover:bg-gray-600 rounded-t-lg font-semibold text-lg flex justify-between items-center text-gray-100">
                                 <span>2. 依存関係管理</span>
                                 <span class="accordion-icon transform transition-transform">▼</span>
                             </button>
                             <div class="accordion-content">
-                                <div class="grid md:grid-cols-2 gap-px bg-stone-200">
-                                    <div class="p-4 bg-white">
+                                <div class="grid md:grid-cols-2 gap-px bg-gray-600">
+                                    <div class="p-4 bg-gray-800">
                                         <h5 class="font-bold">Leiningen</h5>
                                         <p class="mb-2"><strong>競合解決:</strong> "Nearest-Wins" (最近接優先)。プロジェクトルートに近い定義が優先される。</p>
                                         <p><strong>ソース:</strong> Mavenリポジトリが基本。`checkouts`でローカル依存を管理。</p>
                                     </div>
-                                    <div class="p-4 bg-white">
+                                    <div class="p-4 bg-gray-800">
                                         <h5 class="font-bold">Clojure CLI</h5>
                                         <p class="mb-2"><strong>競合解決:</strong> "Newest-Wins" (最新版優先)。常に新しいバージョンが選択される。</p>
                                         <p><strong>ソース:</strong> Mavenに加え、Gitリポジトリやローカルディレクトリをファーストクラスでサポート。</p>
@@ -131,39 +131,39 @@
                             </div>
                         </div>
                          <!-- Accordion Item 3 -->
-                        <div class="accordion-item border border-stone-200 rounded-lg">
-                            <button class="accordion-header w-full text-left p-4 bg-stone-100 hover:bg-stone-200 rounded-t-lg font-semibold text-lg flex justify-between items-center">
+                        <div class="accordion-item border border-gray-600 rounded-lg">
+                            <button class="accordion-header w-full text-left p-4 bg-gray-700 hover:bg-gray-600 rounded-t-lg font-semibold text-lg flex justify-between items-center text-gray-100">
                                 <span>3. ビルドとパッケージング</span>
                                 <span class="accordion-icon transform transition-transform">▼</span>
                             </button>
                             <div class="accordion-content">
-                                <div class="grid md:grid-cols-2 gap-px bg-stone-200">
-                                    <div class="p-4 bg-white">
+                                <div class="grid md:grid-cols-2 gap-px bg-gray-600">
+                                    <div class="p-4 bg-gray-800">
                                         <h5 class="font-bold">Leiningen: `lein uberjar`</h5>
-                                        <p class="text-sm text-stone-600">設定より規約。`project.clj`に`:main`を設定すれば、ワンコマンドで実行可能なUber JARを生成。非常に「Easy」。</p>
+                                        <p class="text-sm text-gray-300">設定より規約。`project.clj`に`:main`を設定すれば、ワンコマンドで実行可能なUber JARを生成。非常に「Easy」。</p>
                                     </div>
-                                    <div class="p-4 bg-white">
+                                    <div class="p-4 bg-gray-800">
                                         <h5 class="font-bold">Clojure CLI: `tools.build`</h5>
-                                        <p class="text-sm text-stone-600">ビルドはClojureプログラムそのもの。`build.clj`にAPI関数を使ってビルドタスクを記述。無限の柔軟性を持つ。</p>
+                                        <p class="text-sm text-gray-300">ビルドはClojureプログラムそのもの。`build.clj`にAPI関数を使ってビルドタスクを記述。無限の柔軟性を持つ。</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                          <!-- Accordion Item 4 -->
-                        <div class="accordion-item border border-stone-200 rounded-lg">
-                            <button class="accordion-header w-full text-left p-4 bg-stone-100 hover:bg-stone-200 rounded-t-lg font-semibold text-lg flex justify-between items-center">
+                        <div class="accordion-item border border-gray-600 rounded-lg">
+                            <button class="accordion-header w-full text-left p-4 bg-gray-700 hover:bg-gray-600 rounded-t-lg font-semibold text-lg flex justify-between items-center text-gray-100">
                                 <span>4. 拡張性</span>
                                 <span class="accordion-icon transform transition-transform">▼</span>
                             </button>
                             <div class="accordion-content">
-                                <div class="grid md:grid-cols-2 gap-px bg-stone-200">
-                                    <div class="p-4 bg-white">
+                                <div class="grid md:grid-cols-2 gap-px bg-gray-600">
+                                    <div class="p-4 bg-gray-800">
                                         <h5 class="font-bold">Leiningen: プラグイン</h5>
-                                        <p class="text-sm text-stone-600">`project.clj`の`:plugins`キーで機能を拡張。成熟したエコシステムを持つが、プラグイン開発には特有の作法が必要。</p>
+                                        <p class="text-sm text-gray-300">`project.clj`の`:plugins`キーで機能を拡張。成熟したエコシステムを持つが、プラグイン開発には特有の作法が必要。</p>
                                     </div>
-                                    <div class="p-4 bg-white">
+                                    <div class="p-4 bg-gray-800">
                                         <h5 class="font-bold">Clojure CLI: `build.clj`とエイリアス</h5>
-                                        <p class="text-sm text-stone-600">カスタムタスクは`build.clj`内のただのClojure関数。エイリアスで外部ツールを組み合わせることで、ワークフローを自由に構築できる。</p>
+                                        <p class="text-sm text-gray-300">カスタムタスクは`build.clj`内のただのClojure関数。エイリアスで外部ツールを組み合わせることで、ワークフローを自由に構築できる。</p>
                                     </div>
                                 </div>
                             </div>
@@ -174,11 +174,11 @@
 
             <!-- Command Reference Section -->
             <section id="command-ref" class="page-section">
-                 <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 class="text-2xl font-bold text-center mb-6 text-teal-700">クイックコマンドリファレンス</h3>
-                    <p class="text-center text-stone-600 mb-8">一般的な開発タスクを選択すると、LeiningenとClojure CLIでの対応するコマンドが表示されます。</p>
+                 <div class="bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-700">
+                    <h3 class="text-2xl font-bold text-center mb-6 text-teal-400">クイックコマンドリファレンス</h3>
+                    <p class="text-center text-gray-300 mb-8">一般的な開発タスクを選択すると、LeiningenとClojure CLIでの対応するコマンドが表示されます。</p>
                     <div class="max-w-md mx-auto mb-6">
-                        <select id="taskSelector" class="w-full p-3 border border-stone-300 rounded-md bg-white shadow-sm focus:ring-teal-500 focus:border-teal-500">
+                        <select id="taskSelector" class="w-full p-3 border border-gray-600 rounded-md bg-gray-700 text-gray-100 shadow-sm focus:ring-teal-500 focus:border-teal-500">
                             <option value="default" selected disabled>実行したいタスクを選択...</option>
                             <option value="new">新規プロジェクト作成</option>
                             <option value="repl">REPL起動</option>
@@ -191,14 +191,14 @@
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <h4 class="font-bold text-lg mb-2 text-center">Leiningen</h4>
-                            <div id="leinCommand" class="command-ref-box flex items-center justify-center text-stone-500">
-                                <p>↑上のメニューからタスクを選択</p>
+                            <div id="leinCommand" class="command-ref-box flex items-center justify-center text-gray-400">
+                                <p class="text-gray-400">↑上のメニューからタスクを選択</p>
                             </div>
                         </div>
                         <div>
                             <h4 class="font-bold text-lg mb-2 text-center">Clojure CLI</h4>
-                            <div id="cliCommand" class="command-ref-box flex items-center justify-center text-stone-500">
-                                <p>↑上のメニューからタスクを選択</p>
+                            <div id="cliCommand" class="command-ref-box flex items-center justify-center text-gray-400">
+                                <p class="text-gray-400">↑上のメニューからタスクを選択</p>
                             </div>
                         </div>
                     </div>
@@ -207,41 +207,41 @@
 
             <!-- Key Configs Section -->
             <section id="key-configs" class="page-section">
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 class="text-2xl font-bold text-center mb-6 text-teal-700">覚えるべき必須設定</h3>
-                    <p class="text-center text-stone-600 mb-8">各ツールを使いこなすために、特に重要な設定項目を優先度順に紹介します。</p>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-700">
+                    <h3 class="text-2xl font-bold text-center mb-6 text-teal-400">覚えるべき必須設定</h3>
+                    <p class="text-center text-gray-300 mb-8">各ツールを使いこなすために、特に重要な設定項目を優先度順に紹介します。</p>
                     <div class="grid md:grid-cols-2 gap-8">
                         <div>
                             <h4 class="font-bold text-lg mb-4 text-center">Leiningen: `project.clj`</h4>
                             <div class="space-y-4">
-                                <div class="p-4 border-2 border-amber-400 rounded-lg shadow-md bg-amber-50">
+                                <div class="p-4 border-2 border-amber-400 rounded-lg shadow-md bg-amber-900 bg-opacity-30">
                                     <h5 class="font-bold">🥇 1. `:dependencies`</h5>
-                                    <p class="text-sm">プロジェクトの心臓部。全ての依存ライブラリをここで宣言します。</p>
+                                    <p class="text-sm text-gray-300">プロジェクトの心臓部。全ての依存ライブラリをここで宣言します。</p>
                                 </div>
-                                <div class="p-4 border-2 border-slate-400 rounded-lg shadow-md bg-slate-50">
+                                <div class="p-4 border-2 border-slate-400 rounded-lg shadow-md bg-slate-800 bg-opacity-30">
                                     <h5 class="font-bold">🥈 2. `:profiles`</h5>
-                                    <p class="text-sm">開発、テスト、本番など環境ごとに設定を切り替えるための強力な機能。</p>
+                                    <p class="text-sm text-gray-300">開発、テスト、本番など環境ごとに設定を切り替えるための強力な機能。</p>
                                 </div>
-                                <div class="p-4 border-2 border-orange-500 rounded-lg shadow-md bg-orange-50">
+                                <div class="p-4 border-2 border-orange-500 rounded-lg shadow-md bg-orange-900 bg-opacity-30">
                                     <h5 class="font-bold">🥉 3. `:plugins`</h5>
-                                    <p class="text-sm">`lein-cljsbuild`など、Leiningenの機能を拡張するのに不可欠です。</p>
+                                    <p class="text-sm text-gray-300">`lein-cljsbuild`など、Leiningenの機能を拡張するのに不可欠です。</p>
                                 </div>
                             </div>
                         </div>
                          <div>
                             <h4 class="font-bold text-lg mb-4 text-center">Clojure CLI: `deps.edn` エイリアス</h4>
                             <div class="space-y-4">
-                                <div class="p-4 border-2 border-amber-400 rounded-lg shadow-md bg-amber-50">
+                                <div class="p-4 border-2 border-amber-400 rounded-lg shadow-md bg-amber-900 bg-opacity-30">
                                     <h5 class="font-bold">🥇 1. `:extra-deps` / `:extra-paths`</h5>
-                                    <p class="text-sm">エイリアスの基本。テストや開発ツール用の依存関係とパスを追加します。</p>
+                                    <p class="text-sm text-gray-300">エイリアスの基本。テストや開発ツール用の依存関係とパスを追加します。</p>
                                 </div>
-                                <div class="p-4 border-2 border-slate-400 rounded-lg shadow-md bg-slate-50">
+                                <div class="p-4 border-2 border-slate-400 rounded-lg shadow-md bg-slate-800 bg-opacity-30">
                                     <h5 class="font-bold">🥈 2. `:exec-fn`</h5>
-                                    <p class="text-sm">`-X`フラグでタスクを実行するための核。テストランナーやビルド関数を指定します。</p>
+                                    <p class="text-sm text-gray-300">`-X`フラグでタスクを実行するための核。テストランナーやビルド関数を指定します。</p>
                                 </div>
-                                <div class="p-4 border-2 border-orange-500 rounded-lg shadow-md bg-orange-50">
+                                <div class="p-4 border-2 border-orange-500 rounded-lg shadow-md bg-orange-900 bg-opacity-30">
                                     <h5 class="font-bold">🥉 3. `:jvm-opts` / `:main-opts`</h5>
-                                    <p class="text-sm">JVMの動作を調整したり、伝統的な`-main`関数を実行したりするのに使います。</p>
+                                    <p class="text-sm text-gray-300">JVMの動作を調整したり、伝統的な`-main`関数を実行したりするのに使います。</p>
                                 </div>
                             </div>
                         </div>
@@ -251,23 +251,23 @@
 
             <!-- Migration Guide Section -->
             <section id="migration" class="page-section">
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                     <h3 class="text-2xl font-bold text-center mb-6 text-teal-700">どちらを選び、どう移行するか</h3>
-                    <p class="text-center text-stone-600 mb-8">あなたのプロジェクトに最適なツールはどちらか？選択の指針と、LeiningenからCLIへの移行パスを解説します。</p>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-700">
+                     <h3 class="text-2xl font-bold text-center mb-6 text-teal-400">どちらを選び、どう移行するか</h3>
+                    <p class="text-center text-gray-300 mb-8">あなたのプロジェクトに最適なツールはどちらか？選択の指針と、LeiningenからCLIへの移行パスを解説します。</p>
 
                     <div class="grid md:grid-cols-2 gap-8 mb-10">
-                        <div class="bg-stone-50 rounded-lg p-6 border">
+                        <div class="bg-gray-800 rounded-lg p-6 border border-gray-600">
                             <h4 class="font-bold text-lg mb-3">Leiningenを選ぶ場合</h4>
-                            <ul class="list-disc list-inside space-y-2 text-stone-700">
+                            <ul class="list-disc list-inside space-y-2 text-gray-300">
                                 <li>Clojureエコシステムの初心者</li>
                                 <li>標準的なWebアプリやライブラリ開発</li>
                                 <li>「バッテリー同梱」の体験を好むチーム</li>
                                 <li>既存のLeiningenプロジェクトの保守</li>
                             </ul>
                         </div>
-                         <div class="bg-teal-50 rounded-lg p-6 border border-teal-200">
-                            <h4 class="font-bold text-lg mb-3 text-teal-800">Clojure CLIを選ぶ場合</h4>
-                            <ul class="list-disc list-inside space-y-2 text-teal-900">
+                         <div class="bg-teal-900 bg-opacity-30 rounded-lg p-6 border border-teal-500">
+                            <h4 class="font-bold text-lg mb-3 text-teal-300">Clojure CLIを選ぶ場合</h4>
+                            <ul class="list-disc list-inside space-y-2 text-teal-100">
                                 <li>モノレポなど複雑なプロジェクト構造</li>
                                 <li>ビルドプロセスを完全に制御したい</li>
                                 <li>Gitリポジトリに直接依存したい</li>
@@ -278,25 +278,25 @@
 
                     <div>
                         <h4 class="font-bold text-lg mb-4 text-center">推奨される移行パス</h4>
-                        <div class="relative pl-8 py-4 border-l-2 border-teal-500">
-                           <div class="absolute -left-4 top-4 h-7 w-7 bg-teal-500 text-white rounded-full flex items-center justify-center font-bold">1</div>
+                        <div class="relative pl-8 py-4 border-l-2 border-teal-400">
+                           <div class="absolute -left-4 top-4 h-7 w-7 bg-teal-400 text-gray-900 rounded-full flex items-center justify-center font-bold">1</div>
                            <h5 class="font-semibold mb-1">分析</h5>
-                           <p class="text-sm text-stone-600">`project.clj`の`:dependencies`, `:profiles`, `:plugins`を洗い出す。</p>
+                           <p class="text-sm text-gray-300">`project.clj`の`:dependencies`, `:profiles`, `:plugins`を洗い出す。</p>
                         </div>
-                         <div class="relative pl-8 py-4 border-l-2 border-teal-500">
-                           <div class="absolute -left-4 top-4 h-7 w-7 bg-teal-500 text-white rounded-full flex items-center justify-center font-bold">2</div>
+                         <div class="relative pl-8 py-4 border-l-2 border-teal-400">
+                           <div class="absolute -left-4 top-4 h-7 w-7 bg-teal-400 text-gray-900 rounded-full flex items-center justify-center font-bold">2</div>
                            <h5 class="font-semibold mb-1">変換</h5>
-                           <p class="text-sm text-stone-600">依存関係を`deps.edn`の`:deps`に変換。プロファイルやプラグインの機能は`:aliases`で再構築する。</p>
+                           <p class="text-sm text-gray-300">依存関係を`deps.edn`の`:deps`に変換。プロファイルやプラグインの機能は`:aliases`で再構築する。</p>
                         </div>
-                         <div class="relative pl-8 py-4 border-l-2 border-teal-500">
-                           <div class="absolute -left-4 top-4 h-7 w-7 bg-teal-500 text-white rounded-full flex items-center justify-center font-bold">3</div>
+                         <div class="relative pl-8 py-4 border-l-2 border-teal-400">
+                           <div class="absolute -left-4 top-4 h-7 w-7 bg-teal-400 text-gray-900 rounded-full flex items-center justify-center font-bold">3</div>
                            <h5 class="font-semibold mb-1">ビルド</h5>
-                           <p class="text-sm text-stone-600">`lein uberjar`のロジックを`tools.build`を使って`build.clj`に関数として実装する。</p>
+                           <p class="text-sm text-gray-300">`lein uberjar`のロジックを`tools.build`を使って`build.clj`に関数として実装する。</p>
                         </div>
-                         <div class="relative pl-8 py-4 border-l-2 border-teal-500">
-                           <div class="absolute -left-4 top-4 h-7 w-7 bg-teal-500 text-white rounded-full flex items-center justify-center font-bold">4</div>
+                         <div class="relative pl-8 py-4 border-l-2 border-teal-400">
+                           <div class="absolute -left-4 top-4 h-7 w-7 bg-teal-400 text-gray-900 rounded-full flex items-center justify-center font-bold">4</div>
                            <h5 class="font-semibold mb-1">実行</h5>
-                           <p class="text-sm text-stone-600">新しいエイリアス (`clj -X:test`など) を使って、全てのタスクが正しく実行できるか確認する。</p>
+                           <p class="text-sm text-gray-300">新しいエイリアス (`clj -X:test`など) を使って、全てのタスクが正しく実行できるか確認する。</p>
                         </div>
                     </div>
                 </div>
@@ -407,13 +407,13 @@
 
                 if (year === '2023') {
                     btn2023.classList.add('bg-teal-600', 'text-white');
-                    btn2023.classList.remove('bg-slate-200', 'text-slate-700');
-                    btn2024.classList.add('bg-slate-200', 'text-slate-700');
+                    btn2023.classList.remove('bg-gray-600', 'text-gray-200');
+                    btn2024.classList.add('bg-gray-600', 'text-gray-200');
                     btn2024.classList.remove('bg-teal-600', 'text-white');
                 } else {
                     btn2024.classList.add('bg-teal-600', 'text-white');
-                    btn2024.classList.remove('bg-slate-200', 'text-slate-700');
-                    btn2023.classList.add('bg-slate-200', 'text-slate-700');
+                    btn2024.classList.remove('bg-gray-600', 'text-gray-200');
+                    btn2023.classList.add('bg-gray-600', 'text-gray-200');
                     btn2023.classList.remove('bg-teal-600', 'text-white');
                 }
             }
