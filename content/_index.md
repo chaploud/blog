@@ -1,12 +1,9 @@
 +++
-title = 'chaploud dev notes'
+title = 'Home'
 +++
 
-# ブログへようこそ
+# chaploud dev notes
 
-技術的な学びや日常の記録を綴っています。
+ふるさとプログラマーによる技術ノート
 
-最新の投稿をぜひご覧ください。
-
-- [Clojure CLI Desctiption]({{< ref "./pages/clojure/deps-cli.md" >}})
-- [Clojure CLI Generated](/blog/ai-generated/clojure-cli.html)
+- [リンク集]({{< ref "./pages/links.md">}})
