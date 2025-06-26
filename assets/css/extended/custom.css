@@ -4,3 +4,19 @@
     color: #5fafa2 !important;
     font-style: normal !important;
 }
+
+.highlight pre code:before {
+    display: block;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    content: attr(data-lang);
+    color: #d5d5d6;
+    background: #444;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+}
+
+.highlight pre code:not([data-lang]):before {
+    content: none;
+}
