@@ -11,6 +11,8 @@ ShowBreadCrumbs = false
 ShowCodeCopyButtons = true
 mainSections = ["posts"]
 ShareButtons = ["x", "linkedin", "clipboard"]
+[params.cover]
+image = "images/scilisp.png"
 
 [markup]
 [markup.highlight]
