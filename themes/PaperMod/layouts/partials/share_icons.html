@@ -92,4 +92,26 @@
         </a>
     </li>
     {{- end }}
+    {{- if (cond ($custom) (in $ShareButtons "clipboard") (true)) }}
+    <li>
+        <button type="button" id="copy-page-title-and-url">クリップボードに記事タイトルとURLをコピーする</button>
+    </li>
+    {{- end }}
+</ul>
+
+{{- if (cond ($custom) (in $ShareButtons "clipboard") (true)) }}
+<script>
+const copyButton = document.querySelector('#copy-page-title-and-url')
+  copyButton.addEventListener('click', () => {
+    navigator.clipboard.writeText('{{ $title }} - {{ $pageurl }}').then(
+          () => {
+              const beforeText = copyButton.textContent
+              copyButton.textContent = 'コピーしました！'
+              setTimeout(() => {
+                  copyButton.textContent = beforeText
+              }, 1000)
+          }
+      )});
+</script>
+{{- end }}
 </ul>

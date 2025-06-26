@@ -5,11 +5,12 @@ theme = 'PaperMod'
 
 [params]
 ShowReadingTime = false
-ShowShareButtons = false
+ShowShareButtons = true
 ShowPostNavLinks = false
 ShowBreadCrumbs = false
 ShowCodeCopyButtons = true
 mainSections = ["posts"]
+ShareButtons = ["x", "linkedin", "clipboard"]
 
 [markup]
 [markup.highlight]
