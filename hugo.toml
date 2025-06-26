@@ -1,11 +1,11 @@
 baseURL = 'https://chaploud.github.io/blog/'
 languageCode = 'ja'
-title = 'My Blog'
+title = 'chaploud dev notes'
 theme = 'PaperMod'
 
 [params]
-  ShowReadingTime = true
-  ShowShareButtons = true
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
+ShowReadingTime = true
+ShowShareButtons = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true

@@ -1,5 +1,5 @@
 +++
-title = 'My Blog'
+title = 'chaploud dev notes'
 +++
 
 # ブログへようこそ
