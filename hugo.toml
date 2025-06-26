@@ -9,3 +9,9 @@ ShowShareButtons = true
 ShowPostNavLinks = true
 ShowBreadCrumbs = true
 ShowCodeCopyButtons = true
+
+[menu]
+[[menu.main]]
+name = "About"
+url = "/pages/about/"
+weight = 30
