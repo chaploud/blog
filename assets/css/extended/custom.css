@@ -1,0 +1,6 @@
+/* コメントの色を調整 */
+/* カラーテーマに応じて元々のコメント色を指定し直す必要がある */
+.highlight pre code span[style*="color:#414868"] {
+    color: #5fafa2 !important;
+    font-style: normal !important;
+}

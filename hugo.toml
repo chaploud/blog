@@ -9,9 +9,14 @@ ShowShareButtons = true
 ShowPostNavLinks = true
 ShowBreadCrumbs = true
 ShowCodeCopyButtons = true
+mainSections = ["posts"]
 
-[menu]
-[[menu.main]]
-name = "About"
-url = "/pages/about/"
-weight = 30
+[markup]
+[markup.highlight]
+style = "tokyonight-night"
+
+# [menu]
+# [[menu.main]]
+# name = "About"
+# url = "/pages/about/"
+# weight = 30

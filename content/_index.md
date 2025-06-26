@@ -8,5 +8,5 @@ title = 'chaploud dev notes'
 
 最新の投稿をぜひご覧ください。
 
-- [About Page]({{< ref "./pages/about.md" >}})
-- [Clojure CLI](/blog/ai-generated/clojure-cli.html)
+- [Clojure CLI Desctiption]({{< ref "./pages/clojure/deps-cli.md" >}})
+- [Clojure CLI Generated](/blog/ai-generated/clojure-cli.html)
